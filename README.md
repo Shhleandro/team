@@ -46,7 +46,7 @@
         <div class="mensagem">Mensagem romântica para a Foto 1</div>
 
         <img class="slide" src="https://photos.google.com/search/_cAF1QipMMECQS5bf6xOrj4LpzemU6Mibh0GNc37U_/photo/AF1QipP5lkRc_XIjY3tpywl0-0aQFb-OjE8yjZXsULRT" alt="Foto 2">
-        <div class="mensagem">Mensagem romântica para a Foto 2</div>
+        <div class="mensagem">&#x2764;</div>
 
         <!-- Adicione mais fotos e mensagens conforme necessário -->
     </div>
