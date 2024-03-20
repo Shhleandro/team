@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Romântico</title>
+    <style>
+        /* Estilos opcionais para o slideshow */
+        .slideshow {
+            position: relative;
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow">
+        <img class="slide" src="https://lh3.googleusercontent.com/pw/AP1GczNnIb1-0kLJpSpJ-FIC_EMXR80U8h2t8Z8wFDCGJQQfmCQ5ux-NhtDcaS8XYDAbESUUAumcfJ_owAlEH8NI8Ts9cFLLv6kuEhXcxCrCNtMIG_QsPTmyAmjRTZwyDUtQmQQWK6nbdLWUNxksBxD0g6PS78pEdcIFFIuhZ1n42Gh6WO1-UCz62a5bn3ys0hdjGnVRXYUEWoTBhrmG8l1RkjQ-Q_4i7HIHML4KDolURWqVUfIzEdpwTfOHm9UJGKC-NDve2rvANDVv9ROt4c76Tb0P19or0KufcNgf9062qeiZHjByGlNnK9rwNL5IDWw_zLSx_vFjiERsVmhqF9WHPWEzWc-87UzZDcahfgmXYAhlpSqQ6yyMijjhJaNyUyz5IrHFfwdp2GknbqKmtv3GGYJb7Gl2Nwsonoce6ZE9eCL-3jsrbdt8bwKbVbFenGFWMIiA4igw03cT56P27RSTk6AUbDk4hiMMclp9GJZEfv5pZCbClZeal0OK2MO4JvT2I4skMJppI5xXyGdU7OqnqpivRUkOImj-xU-es4I-Yf3pNA0R-QET6FuTG0Kz7HYn3Xqzmj_V2SdFOHQKNpm4BG7E5QskujKXejZQK_0aA-IumWDH9kK8rlWwkf4_Y1aPvlnBqpG2aFkiGrQlpYVjcVf_dmzEqclT-ua8vbcCWGQJV6QPn9y7Q3dqYmzjNDiYgswK4eEKzlWGi8t5zmeHQZVfOe3vBvi2R3o5kJ6d-RATl88ucfJDpvH-RIgR57DFW9r-pG6v_SEFb9MR6qXoEAvKJLUN0JYVeH-ergQxFpMpMvJzOfcf7YtLquRJ0LLLzqz_35oMMSfJQ1qk8-GP4jgsuFOo2irVFtozn26KvK4Bg9P6do20dY-QnxYRRJK67QjrrxbchFoq4vrq13QIaAR7vvk=w1052-h472-s-no-gm?authuser=0" alt="Primeira foto">
+        <div class="mensagem">Primeira mensagem romântica</div>
+        <img class="slide" src="https://lh3.googleusercontent.com/pw/AP1GczPFed6603b3VV3LairdKsBNFP1NwPEzOIMI5RyUaFeQCsEC45Yh8B6u2nOUTM8zIUFSWEVAskKzxzvxHcf0ZoRVD4pQj5xrMhQPWOHmTtOSVSrDyUlMQ4bYkdydO_Dg34DlTTfnxyYs7CnxOkLr-QnpVslv9DyPmC_byIxmMx67COQR1ZL-grGJUHnR8DItgGF1uB8JC1wVg0pvmZRR_58I2WrCBz3QRWlRvkUZ5mSOJGM8g_MLZVSMt2FUE-vBltvRd5eRYC6_Y1ThVp2GJT2uLc-CC_9_cm9K3aZdRbXzjR50RbWwQycJdlrsjpM4nZ78QFO05LX6Eal5Kcegxo_DrTMn1_qk9SZHQ2sr2-73tROqvPMmiQUhy02zxFr62GrUNviNB_DlOmzW8ShRgVj8eSmRx7Iwd6kAc2w5AL2eKR5WmwpQnfp1r5U8rcEOxGzVeKbM8ROb3uZ_GTOd-0RVnU5bxM90YUUISyS8xxRd5X_-pZno0K2hrtUM-kKkg2Camac7_qI6gmpFN9Zt8GuGFS9DN5GEdJPRbm1WdFper5Awh8yJrMGBqBka4CF9UKl5QhJi9wcpEMHICO7mQDk0LxteqPXFyD3hvvDalaZYYmog9qMxdTZGLlSfoVLtmVWiEOLkWcoApeRO1zDWGLrhv1rksrsccdCpMYUaI1p4xELdCSegr5BfdcClendq1DvmrX2PmWekNut5nFJSKCXj7yEUYaDyT4ZR9pP-F0kitm_FN3Nlq4ufOf0ittUrxKJu3UZqx8vLEeqEbrYBJYUS4pajgBjkMlU_ZqunBwn-_6H79x3qQeV-xR2WIEmT8gTnuRSHD5JXBzMvwCeZS46-9yWQPAscdRS39oVvzsGaoZVy0l8VGIIkYYZdg8STogMWPJuJ6Yi_NHOr7-3OqbeSOrPY=w305-h679-s-no-gm?authuser=0" alt="Segunda foto">
+        <div class="mensagem">Segunda mensagem romântica</div>
+        <!-- Adicione mais fotos e mensagens conforme necessário -->
+    </div>
+    <script>
+        let slideIndex = 0;
+        carousel();
+
+        function carousel() {
+            let slides = document.getElementsByClassName("slide");
+            let mensagens = document.getElementsByClassName("mensagem");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                mensagens[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            mensagens[slideIndex-1].style.display = "block";
+            setTimeout(carousel, 5000); // Altera a imagem a cada 5 segundos
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFs Românticos</title>
+</head>
+<body>
+    <h1>Dois GIFs Românticos para Você</h1>
+    <img src="https://www.google.com/imgres?q=gif%20de%20cora%C3%A7%C3%A3o%20pulsando&imgurl=https%3A%2F%2Fgifman.net%2Fwp-content%2Fuploads%2F2019%2F06%2Fcoracao-partido-12.gif&imgrefurl=https%3A%2F%2Fgifman.net%2Fgifs-de-amor%2Fcoracao-partido-12-gifs-animados-mostrando-coracoes-sendo-partidos%2F&docid=rXOP_21D0dqfFM&tbnid=1RqGynv5EIo5oM&vet=12ahUKEwj-5f6OzYGFAxV8P7kGHdHDDCsQM3oECFkQAA..i&w=300&h=258&hcb=2&ved=2ahUKEwj-5f6OzYGFAxV8P7kGHdHDDCsQM3oECFkQAA" alt="GIF Romântico 1">
+    <img src="https://www.google.com/imgres?q=gif%20de%20cora%C3%A7%C3%A3o%20pulsando&imgurl=https%3A%2F%2Fwww.gifs-animados.net%2Foriginal%2Fteamo.gif&imgrefurl=https%3A%2F%2Fwww.gifs-animados.net%2Foriginal-383.htm&docid=DJbu1VHC_e1PbM&tbnid=ahrxJORS2VqnNM&vet=12ahUKEwj-5f6OzYGFAxV8P7kGHdHDDCsQM3oECGUQAA..i&w=325&h=345&hcb=2&ved=2ahUKEwj-5f6OzYGFAxV8P7kGHdHDDCsQM3oECGUQAA" alt="GIF Romântico 2">
+</body>
+</html>
